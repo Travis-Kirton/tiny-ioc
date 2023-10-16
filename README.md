@@ -121,7 +121,7 @@ const obj = container.get('token'); // returns { hello: 'world' }
 - Allow for Scoped lifecycle dependencies
 - Allow injected dependencies to be swapped with 'Fake' dependencies for testing
 
-## For Maintainors / Contributors
+## For Maintainers / Contributors
 
 - make sure to run lint via `npm run lint`
 - This library is published via [changesets](https://github.com/changesets/changesets)
