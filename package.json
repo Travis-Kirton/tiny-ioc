@@ -1,0 +1,42 @@
+{
+  "name": "@travisk/tiny-ioc",
+  "version": "0.0.7",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "private": false,
+  "scripts": {
+    "dev": "vitest",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "start": "npm run build && node build/index.js",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts",
+    "ci": "npm run lint && npm run build && npm run test:coverage",
+    "release": "npm run ci && changeset publish"
+  },
+  "author": "Travis Kirton",
+  "license": "MIT",
+  "files": [
+    "./dist"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^20.8.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "@vitest/coverage-istanbul": "^0.34.6",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "reflect-metadata": "^0.1.13",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "uuid": "^9.0.1",
+    "vitest": "^0.34.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Travis-Kirton/tiny-ioc.git"
+  }
+}
